@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quattrocento:wght@400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://pub-mediabox-storage.rxweb-prd.com/exhibitor/logo/exh-7a3463fa-56c8-4d38-b9e0-cfa0b16a5d51/desktop-large/90d9502a-004c-4507-a066-9aa8a4fb6ef7.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Philippine Tourism</title>
+</head>
+<body class="min-h-screen flex flex-col bg-[linear-gradient(346deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.04)_22%,rgba(140,140,140,0.04)_22%,rgba(140,140,140,0.04)_69%,rgba(225,225,225,0.04)_69%,rgba(22,225,225,0.04)_100%),linear-gradient(31deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.04)_42%,rgba(140,140,140,0.04)_42%,rgba(140,140,140,0.04)_85%,rgba(225,225,225,0.04)_85%,rgba(225,225,225,0.04)_100%),linear-gradient(55deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.04)_13%,rgba(140,140,140,0.04)_13%,rgba(140,140,140,0.04)_72%,rgba(225,225,225,0.04)_72%,rgba(225,225,225,0.04)_100%),linear-gradient(90deg,rgb(225,255,255),rgb(255,255,255))]">
+    <div id="top"></div>
+    <nav class="flex items-center justify-between shadow-lg py-2 px-5 fixed top-0 left-0 w-full bg-white z-50">
+        <div class="flex items-center gap-3">
+            <img class="w-[50px] lg:w-[60px] rounded-[50%] border border-black" src="https://pub-mediabox-storage.rxweb-prd.com/exhibitor/logo/exh-7a3463fa-56c8-4d38-b9e0-cfa0b16a5d51/desktop-large/90d9502a-004c-4507-a066-9aa8a4fb6ef7.jpg" alt="Logo">
+            <h1 style="font-family: 'Poppins', sans-serif;" class="capitalize font-bold text-lg lg:text-2xl">philippines</h1>
+        </div>
+
+        <div class="hidden lg:block">
+            <ul class="flex gap-5">
+                <li><a  style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-md transition transform-transition duration-300 hover:bg-yellow-300 py-2 px-3 rounded-lg" href="#">home</a></li>
+                <li><a  style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-md transition transform-transition duration-300 hover:bg-yellow-300 py-2 px-3 rounded-lg" href="#">destinations</a></li>
+                <li><a  style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-md transition transform-transition duration-300 hover:bg-yellow-300 py-2 px-3 rounded-lg" href="#">galleries</a></li>
+                <li><a  style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-md transition transform-transition duration-300 hover:bg-yellow-300 py-2 px-3 rounded-lg" href="#">contacts</a></li>
+            </ul>
+        </div>
+
+        <div class="lg:hidden">
+            <i id="menuBtn" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+        </div>
+    </nav>
+
+    <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+    <div id="sidebar" class="fixed top-0 right-0 w-[250px] h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex justify-between items-center p-4 border-b">
+            <h2 class="font-bold text-lg">Menu</h2>
+            <i id="closeSidebar" class="fa-solid fa-xmark text-2xl cursor-pointer"></i>
+        </div>
+        <ul class="flex flex-col gap-4 p-5">
+            <li><a href="#" class="font-semibold">Home</a></li>
+            <li><a href="#" class="font-semibold">Destinations</a></li>
+            <li><a href="#" class="font-semibold">Galleries</a></li>
+            <li><a href="#" class="font-semibold">Contacts</a></li>
+        </ul>
+    </div>
+
+    <main class="flex-1">
+        <section class="mt-16">
+            <div class="relative">
+                <img class="w-full bg-center bg-cover h-[300px] lg:h-[700px]" src="https://www.deztreks.com/wp-content/uploads/2020/10/Best-Central-Visayas-Tourist-Spots-banner.jpg" alt="Banner">
+                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <h1 style="font-family: 'Open Sans', serif;" class="text-4xl lg:text-7xl md:text-2xl text-white capitalize tracking-wide font-bold">philippines</h1>
+                    <ul class="list-disc list-inside flex items-center text-center gap-5 mt-2 lg:mt-4">
+                        <li class="capitalize text-sm lg:text-md lg:text-md text-white hover:underline hover:text-yellow-300 cursor-pointer">places</li>
+                        <li class="capitalize text-sm lg:text-md lg:text-md text-white hover:underline hover:text-yellow-300 cursor-pointer">food</li>
+                        <li class="capitalize text-sm lg:text-md lg:text-md text-white hover:underline hover:text-yellow-300 cursor-pointer">spots</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10 p-5">
+            <div class="flex flex-wrap justify-center gap-5">
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/357732/x/0/puerto-princesa-underground-river-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Palawan">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">puerto princesa</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">Carved over millennia by flowing water beneath a lush limestone karst landscape, this UNESCO World Heritage Site and New 7 Wonders of Nature is a subterranean marvel that offers a unique and awe-inspiring journey into the earth’s hidden depths. </h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/356644/x/0/white-beach-in-boracay-island-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Boracay">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">boracay, philippines</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">White Beach is the crown jewel of Boracay Island and one of the most celebrated beaches in the Philippines and the world. Stretching for about four kilometers along the island’s western coast, it is famous for its powdery white sand, clear turquoise waters, and postcard-perfect sunsets.</h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/284752/x/0/chocolate-hills-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Chocolate Hills">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">chocolate hills</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">Nestled in the heart of Bohol Island, the Chocolate Hills are one of the island’s most iconic natural attractions. This unique landscape of over 1,200 symmetrical mounds, which transform into a rich chocolate hue during the dry season, has long captivated visitors with its surreal beauty and intriguing geological history.</h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/476940/x/0/intramuros-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Intramuros">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">intramuros, manila</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">Intramuros, Manila’s historic walled city, is a living museum that showcases centuries of Philippine heritage through its preserved Spanish colonial architecture and cobblestone streets.</h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-5 mt-7">
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/356977/x/0/kayangan-lake-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Kayangan Lake">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">kayangan lake, palawan</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">Kayangan Lake in Palawan, is one of the most popular Coron tourist spots and is included in Coron island-hopping tours that depart from town on a regular basis. It is also one of the cleanest lakes in Asia.</h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/357734/x/0/kawasan-falls-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Kawasan Falls">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">kawasan falls, cebu</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">Cebu is a province in Visayas region of the Philippines that is often recognized as a premier destination. This is so because the island has numerous white sand beaches lining its shore and in islands within its district. Many local and foreign tourists make their way here throughout the year to enjoy the top Cebu tourist spots, learn about its culture and history, and taste its delicious delicacies. Other than the beaches, the province has a number of waterfalls, one of which is Kawasan Falls.</h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/260921/x/0/nacpan-beach-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Nacpan Beach">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">nacpan beach, palawan</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">Nacpan Beach is a four-kilometer stretch of powdery cream-colored sand lined with swaying coconut trees and clear turquoise waters, located about 17 kilometers north of El Nido town in Palawan Island. Once a hidden gem, Nacpan Beach has grown into one of the top attractions in El Nido Town, attracting beach lovers in search of quiet, unspoiled shores.</h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[330px] h-[430px] bg-white rounded-xl overflow-hidden flex flex-col">
+                    <img class="w-full h-[200px] object-cover rounded-t-xl" src="https://gttp.images.tshiftcdn.com/198603/x/0/calle-crisologo-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Calle Crisologo">
+                    <div class="flex flex-col justify-between flex-1 px-3 py-3 rounded-b-xl">
+                        <h2 class="capitalize font-semibold mb-2 text-sm lg:text-lg md:text-sm">calle crisologo, vigan city</h2>
+                        <h3 class="text-sm lg:text-md text-gray-700 line-clamp-5">Calle Crisologo in Vigan City, Ilocos Sur Province, is one of the most iconic heritage streets in the Philippines. A cobblestone pathway flanked by Spanish-era ancestral homes, vintage lamps, and horse-drawn carriages, this charming road offers a glimpse into the country’s colonial past. As one of the most popular Vigan City tourist spots, Calle Crisologo invites visitors to experience history with every step.</h3>
+                        <div class="flex justify-end mt-3">
+                            <a href="#" class="bg-black text-sm lg:text-md text-white py-2 px-4 rounded-lg capitalize transition transform-transition duration-300 border border-black hover:bg-transparent hover:text-black hover:border-black">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="font-family: 'Open Sans', serif;" class="bg-white w-full">
+        <div class="max-w-7xl mx-auto flex flex-col">
+            <div class="flex flex-col md:flex-row md:px-16 justify-between py-6 px-16 items-start">
+                <div class="flex items-start gap-5 flex-col">
+                    <div class="flex items-center gap-2">
+                        <img class="w-[50px]" src="https://pub-mediabox-storage.rxweb-prd.com/exhibitor/logo/exh-7a3463fa-56c8-4d38-b9e0-cfa0b16a5d51/desktop-large/90d9502a-004c-4507-a066-9aa8a4fb6ef7.jpg" alt="Logo">
+                        <h1 style="font-family: 'Poppins', sans-serif;" class="capitalize font-bold text-lg lg:text-xl">philippines</h1>
+                    </div>
+
+                    <div class="">
+                        <p style="font-family: 'Open Sans', sans-serif;" class="font-semibold text-left text-sm lg:text-md">Discover the beauty, culture, and hidden gems of the Philippines. <br> Your ultimate guide to destinations, food, and experiences across the archipelago.</p>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook text-3xl lg:text-3xl"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram text-3xl lg:text-3xl"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-github text-3xl lg:text-3xl"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin text-3xl lg:text-3xl"></i>
+                        </a>
+                    </div>
+
+                    <a class="inline-flex items-center gap-2 border-2 border-black py-2 px-3 uppercase text-sm transform transform-transition duration-300 hover:bg-gray-300/50" href="#top"><i class="fa fa-angles-up"></i>back to top</a>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 md:gap-20 mt-5 lg:mt-1">
+                    <div class="flex flex-col">
+                        <h1 class="text-md lg:text-md font-bold mb-2 capitalize">site map</h1>
+                        <ul class="flex flex-col gap-1">
+                            <li><a style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-sm hover:underline" href="#">home</a></li>
+                            <li><a style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-sm hover:underline" href="#">destinations</a></li>
+                            <li><a style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-sm hover:underline" href="#">galleries</a></li>
+                            <li><a style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-sm hover:underline" href="#">contacts</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <h1 class="text-md lg:text-md font-bold mb-2 capitalize">Legal</h1>
+                        <ul class="flex flex-col gap-1">
+                            <li><a style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-sm hover:underline" href="#">privacy policy</a></li>
+                            <li><a style="font-family: 'Open Sans';" class="font-semibold tracking-wide text-sm hover:underline" href="#">Terms of Services</a></li>
+                            <li><a style="font-family: 'Open Sans';" class="capitalize font-semibold tracking-wide text-sm hover:underline" href="#">trademark policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-yellow-400 p-3">
+            <p class="capitalize text-sm lg:text-sm md:text-sm font-semibold text-center">© <span id="year"></span> philippine tourism. all rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
