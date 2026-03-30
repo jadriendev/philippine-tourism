@@ -24,3 +24,9 @@ const menuBtn = document.getElementById('menuBtn');
     overlay.addEventListener('click', closeSide);
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+AOS.init({
+    once: true,
+    easing: 'ease-out-cubic',
+    offset: 120
+  });
