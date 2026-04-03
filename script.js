@@ -25,8 +25,10 @@ const menuBtn = document.getElementById('menuBtn');
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-AOS.init({
+if (window.innerWidth > 768) {
+  AOS.init({
     once: true,
     easing: 'ease-out-cubic',
     offset: 120
   });
+}
