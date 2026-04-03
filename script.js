@@ -25,7 +25,11 @@ const menuBtn = document.getElementById('menuBtn');
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-if (window.innerWidth > 768) {
+if (window.innerWidth <= 768) { // adjust breakpoint kung needed
+  document.querySelectorAll('[data-aos]').forEach(el => {
+    el.removeAttribute('data-aos');
+  });
+} else {
   AOS.init({
     once: true,
     easing: 'ease-out-cubic',
